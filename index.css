@@ -1,0 +1,305 @@
+:root {
+  --color-text-primary: #303030;
+  --color-primary: #303030;
+  --color-secondary: #eeeeee;
+  --color-black: #100603;
+  --color-red: #ff1616;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica", sans-serif;
+  color: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Arial", sans-serif;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2.25rem;
+  font-weight: 500;
+  margin: 1rem 0;
+}
+p {
+  font-size: 1rem;
+  text-align: justify;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.texto--centrado {
+  text-align: center;
+}
+
+em {
+  font-family: "Georgia", serif;
+}
+
+/* LISTAS */
+@media (min-width: 1200px) {
+  p {
+    font-size: 1.1rem;
+  }
+}
+
+ul {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 1200px) {
+  li {
+    font-size: 1.1rem;
+  }
+}
+
+.lista-robots {
+  list-style-type: none;
+  list-style-image: url('./img/icon-robot.png');
+}
+
+.lista-cuadrados {
+  list-style-image: none;
+  list-style-type: square;
+}
+
+/* FIN LISTAS */
+
+a {
+  color: var(--color-red);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-red);
+  text-decoration: underline;
+}
+
+.image--responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.header {
+  width: 100%;
+  background: var(--color-black);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  flex: 0 0 auto;
+}
+
+/* CONTENEDORES */
+
+.main {
+  padding: 2rem 1rem;
+  margin: 0 auto;
+  flex: 1;
+}
+
+.section {
+  max-width: 80%;
+}
+
+.section--estrecho {
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+/* Movil */
+@media (min-width: 480px) {
+  .main {
+    max-width: 90%;
+  }
+}
+/* Tablet */
+@media (min-width: 768px) {
+  .main {
+    max-width: 85%;
+  }
+}
+/* Portatil */
+@media (min-width: 1024px) {
+  .main {
+    max-width: 80%;
+  }
+}
+/* Escritorio */
+@media (min-width: 1200px) {
+  .main {
+    max-width: 70%;
+  }
+}
+
+.navbar {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar__item {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.navbar__item a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar__item a:hover {
+  color: var(--color-red);
+}
+
+.navbar__item .link--active {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.navbar__header__image {
+  margin-bottom: 1rem;
+}
+
+footer {
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.footer--principal {
+  margin-top: 2rem;
+}
+
+.footer--secundario {
+  width: 100%;
+  height: 10rem;
+  background-color: #100603;
+  color: var(--color-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__about {
+  width: 80%;
+  margin: auto;
+  display: block;
+}
+
+.footer__about strong {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.footer__about img {
+  display: block;
+  border-radius: 100%;
+  margin: auto;
+}
+
+.footer__about figcaption {
+  display: block;
+  text-align: justify;
+  margin: 1rem auto;
+  font-size: 0.8rem;
+}
+
+/* FIN CONTENEDORES */
+
+/* FIGURAS */
+
+.figure--video {
+  display: block;
+  height: 25vw;
+  width: 70%;
+  margin: 3rem auto;
+}
+
+@media (max-width: 480px) {
+  .figure--video {
+    height: 60vw;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .figure--video {
+    height: 50vw;
+    width: 90%;
+  }
+}
+
+.figure--imagen {
+  display: block;
+  width: 100%;
+}
+
+.figure--imagen-centrada img {
+  margin: auto;
+  display: block;
+}
+
+.figure--imagen-centrada figcaption {
+  text-align: center;
+}
+
+figcaption {
+  display: block;
+  text-align: right;
+  margin: 1rem auto;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* FIN FIGURAS */
+
+/* Citas */
+
+blockquote {
+  background: var(--color-secondary);
+  padding: 0.5rem;
+}
+
+.blockquote {
+  font-style: italic;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.blockquote--nota {
+  font-family: "Georgia", serif;
+  border-left: 3px solid var(--color-red);
+  padding-left: 1rem;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.blockquote--nota cite {
+  margin-top: 1rem;
+  display: block;
+}
+
+/* FIN Citas */
